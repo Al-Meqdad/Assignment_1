@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>School Managment System</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="big-title">
+                <h2 class="title">Insert students</h2>
+                <span class="ligne"> </span>
+            </div>
+            <div class="big_box col-md-9">
+                <form>
+                    <!-- student name -->
+                    <div class="from-control col-md-4">
+                        <label for="name" class="Label">Student Name</label>
+                        <input type="text" class="Input" id="name" placeholder="AlMeqdad Jabi" />
+                    </div>
+                    <!-- student name -->
+
+                    <!-- student id -->
+                    <div class="from-control col-md-4">
+                        <label for="idNumber" class="Label">Student ID</label>
+                        <input type="number" class="Input" id="idNumber" placeholder="11823023" />
+                    </div>
+                    <!-- student id -->
+
+                    <!-- student gdpa -->
+                    <div class="from-control col-md-4">
+                        <label for="gdpa" class="Label">Student GDPA</label>
+                        <input type="number" step="0.01" class="Input" id="gdpa" placeholder="3.0" />
+                    </div>
+                    <div class="from-control col-md-12">
+                        <label for="Number" class="Label">Student Number</label>
+                        <input type="number" step="0.01" class="Input" id="studentNo" placeholder="1,2,3 etc..." />
+                    </div>
+                    <!-- student gdpa -->
+                    <div class="col-md-12">
+                        <button id="submit" class="bttn" type="submit">Add</button>
+                        <button id="list" id="list" class="bttn" type="button" onclick="showList()">Show</button>
+                        <button id="Delete_student" type="button" class="bttn" onclick="Delete_s()">Delete</button>
+                        <button id="Update" type="button" class="bttn" onclick="Update_s()">Update</button>
+                    </div>
+                </form>
+            </div>
+            <div class="box col-md-3">
+                <b>Instructions:</b>
+                <ul>
+                    <li>Fill al the fields to add a new student(The student number is not required)</li>
+                    <li>To check out the list press on the Show button and it will display the list under the box</li>
+                    <li>To delete a student just pick the number of the student from the list and hit the Delete button</li>
+                    <li>To update a student information just choose the student number from the list and update whatever info you choose</li>
+                  </div>
+          </div>
+                    <div id="Title1" class="Title1 hide">
+                        <h2 class="title">Students List</h2>
+                    </div>
+
+                    <div class="Table_Des">
+                        <table id="showTable" class="hide">
+                            <thead>
+                                <tr>
+                                    <td>S_No.</td>
+                                    <td>Name</td>
+                                    <td>ID</td>
+                                    <td>GDPA</td>
+                                </tr>
+                            </thead>
+                            <tbody id="ShowLi"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="Error" id="Error101" aria-hidden="true"><i class="far fa-times-circle"></i>Please fill all the empty fields</div>
+                    <div class="Succes" id="Succes101" aria-hidden="true"><i class="fas fa-check"></i>Student added</div>
+
+                    <script src="./src/main.js"></script>
+                </ul>
+    </body>
+</html>

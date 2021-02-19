@@ -1,0 +1,132 @@
+.big-title {
+    text-align: center;
+    padding: 40px 0px;
+}
+.big-title .title {
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.big-title .ligne {
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #6195ff;
+    margin: auto;
+    margin-top: 5px;
+}
+.Title1 {
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+}
+.big_box {
+    box-shadow: 0px 0px 6px 1px #e4e4e4;
+    padding: 30px 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.box {
+    box-shadow: 0px 0px 6px 1px #e4e4e4;
+    padding: 3px 15px;
+    text-align: center;
+}
+.Label {
+    display: block;
+    margin: 15px 0px 0px 0px;
+    font-weight: 600;
+}
+.Input {
+    width: 250px;
+    height: 45px;
+    border: 1px solid;
+    outline: none;
+    font-size: 20px;
+}
+
+.Error {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    padding: 10px 0;
+    background-color: red;
+    text-align: center;
+    box-shadow: -1px -1px 11px 0px;
+    width: 15%;
+}
+.Error .far {
+    padding-right: 10px;
+    color: white;
+}
+.Succes {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    padding: 10px 0;
+    background-color: green;
+    text-align: center;
+    box-shadow: -1px -1px 11px 0px;
+    width: 10%;
+}
+.Succes .fas {
+    padding-right: 10px;
+    color: white;
+}
+.bttn {
+    width: 10%;
+    padding: 3px 0px 3px 0px;
+    border: 1px solid;
+    background-color: silver;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    height: 40px;
+    margin: 35px 0px 0px 45px;
+}
+
+@media screen and (max-width: 800px) {
+    .bttn {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .Input {
+        width: auto;
+        margin: auto;
+    }
+}
+
+.hide {
+    display: none;
+}
+.Table_Des {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+#showTable {
+    box-shadow: 0px 0px 6px 1px #e4e4e4;
+    padding: 30px 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#showTable tr td {
+    border: 1px solid black;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 20px;
+}
+#showTable tr th {
+    padding-left: 15px;
+}
+
+table {
+    counter-reset: rowNumber;
+}
+
+table tbody tr::before {
+    counter-increment: rowNumber;
+    content: counter(rowNumber) ".";
+}
